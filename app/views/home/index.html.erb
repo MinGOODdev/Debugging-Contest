@@ -10,7 +10,7 @@
     <p>이메일: <%= x.user.email %></p>
     <p>제목: <%= x.title %></p>
     <% unless x.img_url.nil? %>
-      사진: <br> <img src="<%= x.img_url %>"/>
+      사진: <br> <img style="width: 400px; height: 400px;" src="<%= x.img_url %>"/>
     <% end %>
     <p>내용: <%= x.content %></p>
     Hashtag: <% x.hashtags.each do |tag| %>
