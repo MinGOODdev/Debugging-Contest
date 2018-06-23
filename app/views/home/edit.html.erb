@@ -1,7 +1,7 @@
 <div class="container">
   <hr>
   <h2>Edit</h2>
-  <form action="/home/update/<%= @post.id %>" method="post" enctype='multipart/form_data'>
+  <form action="/home/update/<%= @post.id %>" method="post" enctype='multipart/form-data'>
     <div class="form-group">
       <label for="exampleInputEmail1">제목</label>
       <input type="text" name="post_title" value="<%= @post.title %>"
@@ -20,13 +20,8 @@
       <textarea name="hashtags" class="form-control" id="exampleFormControlTextarea1" rows="3">
         <% @post.hashtags.each do |tag| %>
           #<%= tag.name %>
-        <%end%>
+        <% end %>
       </textarea>
-    </div>
-    
-    <div class="form-group">
-      <label for="exampleFormControlFile1">사진</label>
-      <input type="file" name='img' accept="image/*" class="form-control-file" id="exampleFormControlFile1"/>
     </div>
   
     <button type="submit" class="btn btn-primary">Submit</button>
