@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   
-  root 'home#index'
+  root '/'
   
   #post routes
   get 'home/index'
